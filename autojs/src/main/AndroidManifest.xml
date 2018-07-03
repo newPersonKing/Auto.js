@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+          package="com.stardust.autojs"
+    >
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <application
+        >
+        <activity
+            android:name=".execution.ScriptExecuteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme"/>
+
+
+        <activity
+            android:name="com.stardust.autojs.core.permission.PermissionRequestActivity"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.stardust.autojs.runtime.api.image.ScreenCaptureRequestActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <activity
+            android:name="com.stardust.autojs.core.image.capture.ScreenCaptureRequestActivity"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.stardust.autojs.runtime.api.image.ScreenCaptureRequestActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+
+
+    </application>
+
+</manifest>
